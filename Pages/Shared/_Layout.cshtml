@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    @await Html.PartialAsync("MetatagsPartial")
+    @await Html.PartialAsync("CssPartial")
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        @await Html.PartialAsync("HeaderPartial")
+        <!-- Menu -->
+        @await Html.PartialAsync("MenuPartial")
+        <!-- Banner -->
+        @await Html.PartialAsync("BannerPartial")
+        <!-- Main -->
+        <div id="main">
+            <div style="display: none">
+                @RenderBody();
+            </div>
+            <!-- One -->
+            @await Html.PartialAsync("OnePartial")
+            <!-- Two -->
+            @await Html.PartialAsync("TwoPartital")
+        </div>
+        <!-- Contact -->
+        @await Html.PartialAsync("ContactPartial")
+        <!-- Footer -->
+        @await Html.PartialAsync("FooterPartial")
+
+    </div>
+    <!-- Scripts -->
+    @await Html.PartialAsync("ScriptsPartial")
+
+</body>
+</html>
