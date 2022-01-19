@@ -2,7 +2,6 @@
 
 namespace TravelCompany.Domain.Entities
 {
-
     public class TextField : EntityBase
     {
         [Required]
@@ -12,6 +11,6 @@ namespace TravelCompany.Domain.Entities
         public override string Title { get; set; } = "Info";
 
         [Display(Name = "Content")]
-        public override string Text { get; set; } = "Content is field by the author";
+        public override string Text { get; set; } = "Content is always filled by admin";
     }
 }

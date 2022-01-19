@@ -1,7 +1,21 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-}
+﻿@*@model TextField
+    @{
+        ViewBag.Title = Model.MetaTitle;
+        ViewBag.Description = Model.MetaDescription;
+        ViewBag.Keywords = Model.MetaKeywords;
+    }*@
 
-<h1>Index</h1>
-
+@*<div>
+        @Html.Raw(Model.Text)
+    </div>*@
+<!-- Banner -->
+@await Html.PartialAsync("BannerPartial")
+<!-- Main -->
+<div id="main">
+    <!-- One -->
+    @await Html.PartialAsync("OnePartial")
+    <!-- Two -->
+    @await Html.PartialAsync("TwoPartital")
+</div>
+<!-- Contact -->
+@await Html.PartialAsync("ContactPartial")

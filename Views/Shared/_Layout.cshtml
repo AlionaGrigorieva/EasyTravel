@@ -13,20 +13,9 @@
         @await Html.PartialAsync("HeaderPartial")
         <!-- Menu -->
         @await Html.PartialAsync("MenuPartial")
-        <!-- Banner -->
-        @await Html.PartialAsync("BannerPartial")
-        <!-- Main -->
-        <div id="main">
-            <div style="display: none">
-                @RenderBody();
-            </div>
-            <!-- One -->
-            @await Html.PartialAsync("OnePartial")
-            <!-- Two -->
-            @await Html.PartialAsync("TwoPartital")
-        </div>
-        <!-- Contact -->
-        @await Html.PartialAsync("ContactPartial")
+
+        @RenderBody()
+
         <!-- Footer -->
         @await Html.PartialAsync("FooterPartial")
 
