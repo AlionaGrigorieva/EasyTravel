@@ -1,0 +1,45 @@
+﻿@model IQueryable<TravelCompany.Domain.Entities.ServiceItem>
+@{
+    TextField textField = ViewBag.TextField;
+
+    ViewBag.Title = textField.MetaTitle;
+    ViewBag.Description = textField.MetaDescription;
+    ViewBag.Keywords = textField.MetaKeywords;
+}
+
+<body class="is-preload"> 
+    <div id="wrapper">
+        <section id="banner" class="style2" style="margin-bottom:50px">
+            <div class="inner">
+                <span class="image">
+                    <img src="~/images/travel.jpg" alt="" />
+                </span>
+                <header class="major">
+                    <h1>Services</h1>
+                </header>
+            </div>
+        </section>
+            <section id="two" class="spotlights">
+                    @foreach (ServiceItem entity in Model)
+                    {
+                    <section>
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id" class="image">
+                            <img src="~/images/@entity.TitleImagePath" alt="" data-position="center center" />
+                        </a>
+                        <div class="content">
+                            <div class="inner">
+                                <header class="major">
+                                    <h3>@entity.Title</h3>
+                                </header>
+                                <p>@entity.Text</p>
+                            </div>
+                        </div>
+                    </section>
+                    }
+                            
+                    </section>
+
+
+    </div>
+
+</body>

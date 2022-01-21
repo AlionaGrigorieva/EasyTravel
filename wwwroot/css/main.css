@@ -2496,3 +2496,7 @@ body.is-menu-visible #menu {
     transform: none;
     opacity: 1;
     visibility: visible; }
+
+.content travel {
+    background: url('wwwroot/images/banner.jpg');
+}

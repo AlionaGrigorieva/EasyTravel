@@ -21,7 +21,7 @@
                         |
                         <form style="display: inline-block;" id="form-@entity.Id" asp-area="Admin" asp-controller="ServiceItems" asp-action="Delete" method="post">
                             <input type="hidden" name="id" value="@entity.Id">
-                            <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">удалить</a>
+                            <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">Delete</a>
                         </form>
                         |
                         <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">

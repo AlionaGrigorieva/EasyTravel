@@ -1,0 +1,19 @@
+﻿@model IQueryable<ServiceItem>
+
+@if (Model?.Any() == true)
+{
+    <section id="one" class="tiles">
+            @foreach (ServiceItem entity in Model)
+            {
+            <article>
+                <span class="image">
+                    <img src="~/images/@entity.TitleImagePath" alt="" />
+                </span>
+                <header class="major">
+                    <h3><a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id" class="link">@entity.Title</a></h3>
+                    <p>@entity.Subtitle</p>
+                </header>
+            </article>
+            }
+    </section>
+}
